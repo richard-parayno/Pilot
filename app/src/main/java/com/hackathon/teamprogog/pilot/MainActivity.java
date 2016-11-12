@@ -1,5 +1,6 @@
 package com.hackathon.teamprogog.pilot;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -74,17 +75,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Intent intent = null;
+
         if (id == R.id.nav_issues) {
-            // Handle the camera action
+            intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
+            intent = new Intent(getBaseContext(), BillActivity.class);
 
         } else if (id == R.id.nav_contact) {
 
         } else if (id == R.id.nav_home) {
 
         } else if (id == R.id.nav_signout) {
+            intent = new Intent(getBaseContext(), StartupActivity.class);
 
         }
+
+        startActivity(intent);
+        finish();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
