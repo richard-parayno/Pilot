@@ -38,6 +38,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void loginUser(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        finish();
+        
+        /**
         EditText userNameInput  = (EditText)findViewById(R.id.username);
         String username = userNameInput.getText().toString();
         EditText userPasswordInput  = (EditText)findViewById(R.id.password);
@@ -62,5 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+         **/
     }
 }

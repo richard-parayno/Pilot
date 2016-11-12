@@ -63,8 +63,6 @@ public class RegistrationActivity extends AppCompatActivity {
         newUser.setUsername(userName);
         newUser.setEmail(email);
         newUser.setPassword(password);
-        newUser.put("address", address);
-        newUser.put("accountNo", accountNo);
 
         newUser.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
