@@ -81,21 +81,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
-
-        } else if (id == R.id.nav_contact) {
-
-        } else if (id == R.id.nav_home) {
-
         } else if (id == R.id.nav_signout) {
-            intent = new Intent(getBaseContext(), StartupActivity.class);
-
+            intent = new Intent(getApplicationContext(), StartupActivity.class);
+            finish();
         }
 
         startActivity(intent);
-        finish();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+        item.setChecked(false);
         return true;
     }
 
