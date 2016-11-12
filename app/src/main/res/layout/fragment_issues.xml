@@ -19,13 +19,21 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <Button
-                    android:text="Button"
-                    android:layout_width="match_parent"
+                <!-- activity_info layout file -->
+                <!-- Clickable title -->
+                <TextView
                     android:layout_height="wrap_content"
-                    android:id="@+id/button"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_width="match_parent"
+                    android:id="@+id/issueTitle"
+                    android:text="First Issue"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"/>
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/issueDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Dogo Died"/>
+
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
