@@ -35,6 +35,7 @@
                     android:layout_height="wrap_content"
                     android:hint="PLDT Account No."
                     android:id="@+id/accountno" />
+
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -46,6 +47,17 @@
                     android:layout_height="wrap_content"
                     android:hint="Address"
                     android:id="@+id/address" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:id="@+id/username" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
