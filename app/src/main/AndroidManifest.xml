@@ -19,10 +19,13 @@
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity">
+
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".BillActivity" />
+        <activity android:name=".BillActivity">
+
+        </activity>
         <activity android:name=".StartupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,10 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CallActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

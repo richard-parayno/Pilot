@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (user != null) {
                     System.out.println("Login Successful");
 
-                    Intent intent = new Intent(getApplicationContext(), BillActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
