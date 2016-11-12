@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link issues.OnFragmentInteractionListener} interface
+ * {@link IssuesActivity.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link issues#newInstance} factory method to
+ * Use the {@link IssuesActivity#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class issues extends Fragment {
+public class IssuesActivity extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class issues extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public issues() {
+    public IssuesActivity() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class issues extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment issues.
+     * @return A new instance of fragment IssuesActivity.
      */
     // TODO: Rename and change types and number of parameters
-    public static issues newInstance(String param1, String param2) {
-        issues fragment = new issues();
+    public static IssuesActivity newInstance(String param1, String param2) {
+        IssuesActivity fragment = new IssuesActivity();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
