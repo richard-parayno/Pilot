@@ -23,7 +23,7 @@ public class CallActivity extends AppCompatActivity {
         callButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel: 0377778888"));
+                callIntent.setData(Uri.parse("tel: 09284994286"));
 
                 if (ActivityCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)
                     startActivity(callIntent);
