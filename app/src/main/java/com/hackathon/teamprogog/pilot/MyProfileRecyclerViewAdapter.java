@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.hackathon.teamprogog.pilot.ItemFragment.OnListFragmentInteractionListener;
+import com.hackathon.teamprogog.pilot.ProfileFragment.OnListFragmentInteractionListener;
 import com.hackathon.teamprogog.pilot.dummy.DummyContent.DummyItem;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public class MyProfileRecyclerViewAdapter extends RecyclerView.Adapter<MyProfile
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item, parent, false);
+                .inflate(R.layout.fragment_profile, parent, false);
         return new ViewHolder(view);
     }
 
