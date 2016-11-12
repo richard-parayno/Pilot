@@ -20,7 +20,7 @@ public class BillActivity extends AppCompatActivity {
         imgBtnBill.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent billIntent = new Intent(BillActivity.this, BillActivity.class); //<----- PACHECK NLNG ITO
+                Intent billIntent = new Intent(BillActivity.this, BillActivity.class/*NEXT ACTIVITY HERE */); //<----- PACHECK NLNG ITO, ALAM KO HINDI ITO GUMAGANA
                 startActivity(billIntent);
             }
         });
