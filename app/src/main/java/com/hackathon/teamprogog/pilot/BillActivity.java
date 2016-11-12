@@ -1,7 +1,10 @@
 package com.hackathon.teamprogog.pilot;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.paymaya.sdk.android.PayMayaConfig;
 import com.paymaya.sdk.android.checkout.PayMayaCheckout;
