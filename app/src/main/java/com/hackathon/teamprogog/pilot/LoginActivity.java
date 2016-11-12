@@ -29,6 +29,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +69,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //connect to Parse
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId("8OHITIMUQ3")
+                .server("https://pilot-teamprog.herokuapp.com/parse")
+                .build()
+        );
+
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
