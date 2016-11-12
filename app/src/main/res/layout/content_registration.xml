@@ -74,8 +74,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/create_account"
-                    android:layout_weight="1"
-                    android:onClick="createUser" />
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
+                    android:layout_weight="1" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>

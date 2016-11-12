@@ -6,8 +6,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.LogInCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -17,9 +20,24 @@ public class RegistrationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.content_registration);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // initialize parse
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId("8OHITIMUQ3")
+                .server("https://pilot-teamprog.herokuapp.com/parse")
+                .build()
+        );
+        Button register = (Button) findViewById(R.id.create_account);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createUser(view);
+            }
+        });
+
+
 
         /**FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,13 +60,13 @@ public class RegistrationActivity extends AppCompatActivity {
         EditText userAddressInput  = (EditText)findViewById(R.id.address);
         String address = userAddressInput.getText().toString();
 
-        ParseUser user = new ParseUser();
-        user.setUsername(username);
-        user.setEmail(email);
-        user.setPassword(password);
-        user.put("address", address);
+        ParseUser newUser = new ParseUser();
+        newUser.setUsername(username);
+        newUser.setEmail(email);
+        newUser.setPassword(password);
+        newUser.put("address", address);
 
-        user.signUpInBackground(new SignUpCallback() {
+        newUser.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
                 if (e == null) {
                     // Hooray! Let them use the app now.
@@ -60,6 +78,24 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void logIn(View view) {
+        EditText userEmailInput  = (EditText)findViewById(R.id.email);
+        String email = userEmailInput.getText().toString();
+        EditText userPasswordInput  = (EditText)findViewById(R.id.password);
+        String password = userPasswordInput.getText().toString();
+
+
+        ParseUser.logInInBackground(email, password, new LogInCallback() {
+            public void done(ParseUser user, ParseException e) {
+                if (user != null) {
+                    // Hooray! The user is logged in.
+                } else {
+                    // Signup failed. Look at the ParseException to see what happened.
+                }
+            }
+        });
     }
 
 }
