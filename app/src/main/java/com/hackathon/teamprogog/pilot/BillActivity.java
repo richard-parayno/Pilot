@@ -16,6 +16,17 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+
+        imgBtnBill = (ImageButton) findViewById(R.id.billingButton);
+
+        imgBtnBill.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent billIntent = new Intent(BillActivity.this, BillActivity.class/*NEXT ACTIVITY HERE */); //<----- PACHECK NLNG ITO, ALAM KO HINDI ITO GUMAGANA
+                startActivity(billIntent);
+            }
+        });
+
         // initialize paymaya
         PayMayaConfig.setEnvironment(PayMayaConfig.ENVIRONMENT_PRODUCTION);
         mPayMayaCheckout = new PayMayaCheckout(PUBLIC_FACING_API_KEY, this);

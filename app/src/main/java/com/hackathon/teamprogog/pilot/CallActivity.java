@@ -29,9 +29,7 @@ public class CallActivity extends AppCompatActivity {
                 callIntent.setData(Uri.parse("tel:09284994286"));
 
                 if (ActivityCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
                     System.out.println("Button Failed");
-
                     return;
                 }
                 startActivity(callIntent);

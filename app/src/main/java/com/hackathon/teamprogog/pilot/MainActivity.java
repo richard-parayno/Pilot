@@ -81,7 +81,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
-        } else if (id == R.id.nav_signout) {
+            startActivity(intent);
+        }
+
+         else if (id == R.id.nav_signout) {
             intent = new Intent(getApplicationContext(), StartupActivity.class);
             finish();
         }
