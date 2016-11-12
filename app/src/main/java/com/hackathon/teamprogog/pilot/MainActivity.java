@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
 
+
         } else if (id == R.id.nav_contact) {
 
         } else if (id == R.id.nav_home) {
