@@ -1,8 +1,7 @@
+
 package com.hackathon.teamprogog.pilot.models;
 
-/**
- * Created by rparayno on 12/11/2016.
- */
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
