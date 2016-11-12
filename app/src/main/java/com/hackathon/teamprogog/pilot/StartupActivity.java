@@ -4,24 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.parse.Parse;
 import com.parse.ParseUser;
+import com.paymaya.sdk.android.PayMayaConfig;
+import com.paymaya.sdk.android.checkout.PayMayaCheckout;
 
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class StartupActivity extends AppCompatActivity {
 
-    public static final String BASE_URL = "https://pg-sandbox.paymaya.com/payments/v1/";
-    Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
-    Gson gson = new GsonBuilder()
-            .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
-            .create();
+
 
 
     @Override
@@ -39,10 +30,6 @@ public class StartupActivity extends AppCompatActivity {
 
         if (currentUser != null)
             currentUser.logOut();
-
-        // start paymaya
-
-
 
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
