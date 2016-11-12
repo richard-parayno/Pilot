@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
 
 public class StartupActivity extends AppCompatActivity {
 
@@ -18,6 +19,12 @@ public class StartupActivity extends AppCompatActivity {
                 .server("https://pilot-teamprog.herokuapp.com/parse")
                 .build()
         );
+        // clear sessions
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        currentUser.logOut();
+
+        // start paymaya
+
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }

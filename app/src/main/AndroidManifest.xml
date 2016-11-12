@@ -19,7 +19,9 @@
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
+        <activity android:name=".StartupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +35,8 @@
 
         <activity android:name=".LoginActivity">
         </activity>
+
+        <activity android:name=".BillActivity" />
     </application>
 
 </manifest>
