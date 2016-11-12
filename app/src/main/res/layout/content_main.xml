@@ -22,7 +22,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="288dp">
+            android:layout_height="236dp">
 
             <TextView
                 android:text="Issues Status"
@@ -82,10 +82,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="150dp"
-                app:srcCompat="@android:drawable/ic_dialog_info"
+                app:srcCompat="@drawable/ic_menu_manage"
                 android:background="@android:color/holo_red_light"
                 android:id="@+id/billingButton"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:elevation="0dp" />
 
         </LinearLayout>
 

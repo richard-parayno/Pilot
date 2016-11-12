@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        app:srcCompat="@mipmap/ic_sampleuser"
+        android:id="@+id/pictureImage" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="John Michael Tiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
+        android:text="Address: P. Sherman 42 Wallabyway Sydney"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:id="@+id/address"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
+        android:text="Phone Number: 09224923620"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:id="@+id/pNum"
+        android:layout_marginLeft="10sp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Account Number: 123456"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/accNum"
+        android:layout_marginLeft="10sp"
+        android:textSize="18sp" />
+
 </LinearLayout>
