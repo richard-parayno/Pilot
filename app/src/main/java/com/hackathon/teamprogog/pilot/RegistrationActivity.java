@@ -61,32 +61,17 @@ public class RegistrationActivity extends AppCompatActivity {
             public void done(ParseException e) {
                 if (e == null) {
                     // Hooray! Let them use the app now.
+                    System.out.println("Account created");
+
 
                 } else {
                     // Sign up didn't succeed. Look at the ParseException
                     // to figure out what went wrong
+                    System.out.println("Error in creating account");
                 }
             }
         });
 
-    }
-
-    public void logIn(View view) {
-        EditText userEmailInput  = (EditText)findViewById(R.id.email);
-        String email = userEmailInput.getText().toString();
-        EditText userPasswordInput  = (EditText)findViewById(R.id.password);
-        String password = userPasswordInput.getText().toString();
-
-
-        ParseUser.logInInBackground(email, password, new LogInCallback() {
-            public void done(ParseUser user, ParseException e) {
-                if (user != null) {
-                    // Hooray! The user is logged in.
-                } else {
-                    // Signup failed. Look at the ParseException to see what happened.
-                }
-            }
-        });
     }
 
 }
