@@ -7,6 +7,9 @@ import android.os.Bundle;
 import com.parse.Parse;
 import com.parse.ParseUser;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class StartupActivity extends AppCompatActivity {
 
     @Override
@@ -21,7 +24,9 @@ public class StartupActivity extends AppCompatActivity {
         );
         // clear sessions
         ParseUser currentUser = ParseUser.getCurrentUser();
-        currentUser.logOut();
+
+        if (currentUser != null)
+            currentUser.logOut();
 
         // start paymaya
 

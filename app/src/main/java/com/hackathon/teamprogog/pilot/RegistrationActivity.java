@@ -37,24 +37,32 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
-    public void createUser(View view) {
+    protected void createUser(View view) {
         EditText userAccountNo = (EditText)findViewById(R.id.accountno);
         String accountNo = userAccountNo.getText().toString();
+        System.out.println(accountNo);
         EditText userNameInput = (EditText)findViewById(R.id.username);
         String userName = userNameInput.getText().toString();
+        System.out.println(userName);
+
         EditText userEmailInput  = (EditText)findViewById(R.id.email);
         String email = userEmailInput.getText().toString();
+        System.out.println(email);
+
         EditText userPasswordInput  = (EditText)findViewById(R.id.password);
         String password = userPasswordInput.getText().toString();
+        System.out.println(password);
+
         EditText userAddressInput  = (EditText)findViewById(R.id.address);
         String address = userAddressInput.getText().toString();
+        System.out.println(address);
+
+
 
         ParseUser newUser = new ParseUser();
         newUser.setUsername(userName);
         newUser.setEmail(email);
         newUser.setPassword(password);
-        newUser.put("address", address);
-        newUser.put("accountNo", accountNo);
 
         newUser.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {

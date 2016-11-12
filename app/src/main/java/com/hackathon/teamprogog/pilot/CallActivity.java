@@ -18,15 +18,20 @@ public class CallActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call);
+
         callButton = (Button) findViewById(R.id.btnCall);
 
         callButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
+            @Override
+            public void onClick(View v) {
+                //  callButton.
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel: 09284994286"));
+                callIntent.setData(Uri.parse("tel:09284994286"));
 
-                if (ActivityCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)
-                    startActivity(callIntent);
+                if (ActivityCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+                    return;
+
+                startActivity(callIntent);
 
             }
         });
