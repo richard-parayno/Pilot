@@ -9,6 +9,9 @@ import android.widget.ImageButton;
 import com.paymaya.sdk.android.PayMayaConfig;
 import com.paymaya.sdk.android.checkout.PayMayaCheckout;
 import com.paymaya.sdk.android.checkout.PayMayaCheckoutCallback;
+import com.paymaya.sdk.android.checkout.models.Address;
+import com.paymaya.sdk.android.checkout.models.Buyer;
+import com.paymaya.sdk.android.checkout.models.Contact;
 
 public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCallback {
 
@@ -35,6 +38,8 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
         mPayMayaCheckout = new PayMayaCheckout(PUBLIC_FACING_API_KEY, this);
 
     }
+
+
 
 
     @Override

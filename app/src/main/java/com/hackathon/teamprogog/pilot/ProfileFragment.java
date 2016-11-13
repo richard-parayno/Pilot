@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import com.hackathon.teamprogog.pilot.dummy.DummyContent;
 import com.hackathon.teamprogog.pilot.dummy.DummyContent.DummyItem;
+import com.paymaya.sdk.android.checkout.models.Address;
+import com.paymaya.sdk.android.checkout.models.Buyer;
+import com.paymaya.sdk.android.checkout.models.Contact;
 
 import java.util.List;
 
@@ -54,6 +57,7 @@ public class ProfileFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+        constructBuyer();
     }
 
     @Override
@@ -108,4 +112,14 @@ public class ProfileFragment extends Fragment {
         // TODO: Update argument type and name
         void onListFragmentInteraction(DummyItem item);
     }
+
+    public void constructBuyer() {
+        Contact contact = new Contact("mobile number", "email");
+        Address address = new Address("line 1", "line 2", "city", "state", "zip code", "country code");
+        Buyer buyer = new Buyer("First name", "Middle name", "Last name");
+        buyer.setContact(contact);
+        buyer.setBillingAddress(address);
+        buyer.setShippingAddress(address);
+    }
+
 }
