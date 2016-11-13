@@ -12,13 +12,11 @@
         android:textAlignment="center"
         android:textSize="36sp" />
 
-    <TextView
-        android:text="INSERT ICON HERE"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+        app:srcCompat="@mipmap/ic_mainicon"
+        android:id="@+id/imageView"
+        android:layout_height="200dp" />
 
     <ScrollView
         android:layout_width="match_parent"

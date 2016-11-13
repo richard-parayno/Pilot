@@ -14,9 +14,9 @@ import android.view.animation.AnimationUtils;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link IssuesActivity.OnFragmentInteractionListener} interface
+ * {@link IssuesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link IssuesActivity#newInstance} factory method to
+ * Use the {@link IssuesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 class Fx{
@@ -25,7 +25,7 @@ class Fx{
      * @param ctx
      * @param v
      */
-    IssuesActivity IA = new IssuesActivity();
+    IssuesFragment IA = new IssuesFragment();
 
     public static void slide_down(Context ctx, View v){
         Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_down);
@@ -65,7 +65,7 @@ class Fx{
     }
 }
 
-public class IssuesActivity extends Fragment {
+public class IssuesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -83,7 +83,7 @@ public class IssuesActivity extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public IssuesActivity() {
+    public IssuesFragment() {
         // Required empty public constructor
     }
 
@@ -93,11 +93,11 @@ public class IssuesActivity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment IssuesActivity.
+     * @return A new instance of fragment IssuesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static IssuesActivity newInstance(String param1, String param2) {
-        IssuesActivity fragment = new IssuesActivity();
+    public static IssuesFragment newInstance(String param1, String param2) {
+        IssuesFragment fragment = new IssuesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

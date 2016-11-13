@@ -34,7 +34,6 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
 
-       
 
         // initialize paymaya
         PayMayaConfig.setEnvironment(PayMayaConfig.ENVIRONMENT_SANDBOX);
@@ -95,10 +94,12 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
     }
 
 
+
+    
+
     private void executeCheckout(Checkout payload) {
         mPayMayaCheckout.execute(BillActivity.this, payload);
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+
     }
 
 
@@ -106,19 +107,16 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
 
     @Override
     public void onCheckoutSuccess() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+
     }
 
     @Override
     public void onCheckoutCanceled() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+
     }
 
     @Override
     public void onCheckoutFailure(String message) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+
     }
 }

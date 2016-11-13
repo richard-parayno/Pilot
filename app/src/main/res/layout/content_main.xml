@@ -10,8 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.hackathon.teamprogog.pilot.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="com.hackathon.teamprogog.pilot.MainActivity">
 
     <GridLayout
         android:layout_width="match_parent"
@@ -22,11 +21,13 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="236dp">
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0">
 
             <TextView
                 android:text="Issues Status"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="35dp"
                 android:layout_alignParentTop="true"
@@ -37,58 +38,28 @@
 
             <ListView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="232dp"
                 android:theme="@style/AppTheme"
                 android:background="@android:color/holo_red_light"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/Issues" />
+
         </RelativeLayout>
 
-        <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_row="8"
-            android:layout_column="0">
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="150dp"
-                app:srcCompat="@android:drawable/stat_sys_phone_call"
-                android:id="@+id/callButton"
-                android:layout_row="9"
-                android:layout_column="12"
-                android:layout_centerVertical="true"
-                android:background="@android:color/holo_red_light"
-                android:cropToPadding="false"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp" />
 
 
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+    </GridLayout>
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="150dp"
-                app:srcCompat="@drawable/ic_menu_manage"
-                android:background="@android:color/holo_red_light"
-                android:id="@+id/billingButton"
-                android:layout_margin="10dp"
-                android:elevation="0dp" />
-
-        </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -97,7 +68,11 @@
             android:layout_row="7"
             android:layout_column="0"
             android:gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listView3"
+            android:layout_alignLeft="@+id/listView3"
+            android:layout_alignStart="@+id/listView3"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:text="Contact Support"
@@ -122,6 +97,51 @@
                 android:layout_marginRight="10dp" />
         </LinearLayout>
 
-    </GridLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/listView2"
+            android:layout_alignStart="@+id/listView2">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:srcCompat="@android:drawable/stat_sys_phone_call"
+                android:id="@+id/callButton"
+                android:layout_row="9"
+                android:layout_column="12"
+                android:layout_centerVertical="true"
+                android:background="@android:color/holo_red_light"
+                android:cropToPadding="false"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+
+
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/ic_billbill"
+                android:background="@android:color/holo_red_light"
+                android:id="@+id/billingButton"
+                android:layout_margin="10dp"
+                android:elevation="0dp"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
