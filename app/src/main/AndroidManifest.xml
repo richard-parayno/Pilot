@@ -21,17 +21,20 @@
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".BillActivity"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".StartupActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".BillActivity">
+
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".StartupActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
