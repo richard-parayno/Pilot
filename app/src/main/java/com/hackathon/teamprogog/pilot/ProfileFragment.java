@@ -26,6 +26,7 @@ import java.util.List;
  * interface.
  */
 public class ProfileFragment extends Fragment {
+    protected Buyer buyer;
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -116,10 +117,13 @@ public class ProfileFragment extends Fragment {
     public void constructBuyer() {
         Contact contact = new Contact("mobile number", "email");
         Address address = new Address("line 1", "line 2", "city", "state", "zip code", "country code");
-        Buyer buyer = new Buyer("First name", "Middle name", "Last name");
+        buyer = new Buyer("First name", "Middle name", "Last name");
         buyer.setContact(contact);
         buyer.setBillingAddress(address);
         buyer.setShippingAddress(address);
     }
 
+    public Buyer getBuyer() {
+        return buyer;
+    }
 }
