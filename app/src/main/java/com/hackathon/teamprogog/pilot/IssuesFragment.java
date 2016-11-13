@@ -11,60 +11,6 @@ import android.widget.TextView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link IssuesFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link IssuesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-class Fx{
-    /**
-     *
-     * @param ctx
-     * @param v
-     */
-    IssuesFragment IA = new IssuesFragment();
-
-    public static void slide_down(Context ctx, View v){
-        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_down);
-        if(a != null){
-            a.reset();
-            if(v != null){
-                v.clearAnimation();
-                v.startAnimation(a);
-            }
-        }
-    }
-    public static void slide_up(Context ctx, View v){
-        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_up);
-        if(a != null){
-            a.reset();
-            if(v != null){
-                v.clearAnimation();
-                v.startAnimation(a);
-            }
-        }
-    }
-
-
-
-    /**
-     * onClick handler
-     */
-    public void toggle_contents(View v){
-        if(IA.getTxt_help_gest().isShown()){
-            Fx.slide_up(IA.getContext(), IA.getTxt_help_gest());
-            IA.getTxt_help_gest().setVisibility(View.GONE);
-        }
-        else{
-            IA.getTxt_help_gest().setVisibility(View.VISIBLE);
-            Fx.slide_down(IA.getContext(), IA.getTxt_help_gest());
-        }
-    }
-}
-
 public class IssuesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,11 +21,6 @@ public class IssuesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public TextView getTxt_help_gest() {
-        return txt_help_gest;
-    }
-
-    TextView txt_help_gest;
 
     private OnFragmentInteractionListener mListener;
 
@@ -113,24 +54,8 @@ public class IssuesFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        txt_help_gest = (TextView) getView().findViewById(R.id.issueTitle);
-// hide until its title is clicked
-        txt_help_gest.setVisibility(View.GONE);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_issues, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Context context) {
@@ -165,10 +90,4 @@ public class IssuesFragment extends Fragment {
     }
 
 
-
-    public void toggle_contents(View v){
-        txt_help_gest.setVisibility( txt_help_gest.isShown()
-                ? View.GONE
-                : View.VISIBLE );
-    }
 }

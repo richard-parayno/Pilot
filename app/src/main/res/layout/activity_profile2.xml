@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        app:srcCompat="@mipmap/ic_sampleuser"
+        android:id="@+id/pictureImage" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:text="Labjatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:text="Michael"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/mName"
+            android:layout_toStartOf="@+id/mName"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:text="Tiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/mName"
+            android:layout_toEndOf="@+id/mName" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10.53">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Mobile Number:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="09284994286"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobileNum"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Email: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="michael@yahoo.com"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailAdd"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Address: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="19-A Onyx St."
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lineOne"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="Greenheights Village"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lineTwo"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="Paranaque City"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/city"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="NCR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/state"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="1702"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/zipCode"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="63"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cCode"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

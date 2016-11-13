@@ -32,10 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.content_main, issuesArray);
 
-        ListView listView = (ListView) findViewById(R.id.issueList);
-        listView.setAdapter(adapter);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -117,14 +114,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = null;
 
         if (id == R.id.nav_issues) {
-            intent = new Intent(getBaseContext(), IssuesFragment.class);
+            intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
         } else if (id == R.id.nav_signout) {
             intent = new Intent(getApplicationContext(), StartupActivity.class);
             finish();
         } else if (id == R.id.nav_profile) {
-            intent = new Intent(getBaseContext(), ProfileActivity.class);
+            intent = new Intent(getBaseContext(), ProfileActivity2.class);
         }
 
         startActivity(intent);
