@@ -1,6 +1,7 @@
 package com.hackathon.teamprogog.pilot;
 
 import android.Manifest;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -108,11 +110,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
-        }
-
-         else if (id == R.id.nav_signout) {
+        } else if (id == R.id.nav_signout) {
             intent = new Intent(getApplicationContext(), StartupActivity.class);
             finish();
+        } else if (id == R.id.nav_profile) {
+            intent = new Intent(getBaseContext(), ProfileActivity.class);
         }
 
         startActivity(intent);
