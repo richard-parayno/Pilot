@@ -30,7 +30,6 @@ import java.util.List;
  * interface.
  */
 public class ProfileFragment extends Fragment {
-    protected Buyer buyer;
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -62,7 +61,6 @@ public class ProfileFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
-        constructBuyer();
     }
 
     @Override
@@ -118,45 +116,4 @@ public class ProfileFragment extends Fragment {
         void onListFragmentInteraction(DummyItem item);
     }
 
-    public void constructBuyer() {
-        ParseObject buyerObject = new ParseObject("BuyerObject");
-        buyerObject.put("firstName", "Michael");
-        buyerObject.put("middleName", "Labjatan");
-        buyerObject.put("lastName", "Tiu");
-
-        buyerObject.put("line1", "19-A Onyx Street");
-        buyerObject.put("line2", "Greenheights Village");
-        buyerObject.put("city", "Paranaque City");
-        buyerObject.put("state", "NCR");
-        buyerObject.put("zipcode", 1702);
-        buyerObject.put("ccode", 63);
-
-        buyerObject.put("mobileNun", "09284994286");
-        buyerObject.put("emailAdd", "michael@yahoo.com");
-
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("BuyerObject");
-        query.getInBackground("xWMyZ4YEGZ", new GetCallback<ParseObject>() {
-            public void done(ParseObject object, ParseException e) {
-                if (e == null) {
-                    // object will be your game score
-                } else {
-                    // something went wrong
-                }
-            }
-        });
-
-
-
-
-        Contact contact = new Contact("mobile number", "email");
-        Address address = new Address("line 1", "line 2", "city", "state", "zip code", "country code");
-        buyer = new Buyer("First name", "Middle name", "Last name");
-        buyer.setContact(contact);
-        buyer.setBillingAddress(address);
-        buyer.setShippingAddress(address);
-    }
-
-    public Buyer getBuyer() {
-        return buyer;
-    }
 }
