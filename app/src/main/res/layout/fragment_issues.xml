@@ -25,14 +25,16 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:id="@+id/issueTitle"
-                    android:text="First Issue"
+                    android:text="Issue #1223"
                     android:clickable="true"
-                    android:onClick="toggle_contents"/>
+                    android:onClick="toggle_contents"
+                    android:textSize="30sp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/issueDetails"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:text="Dogo Died"/>
+                    android:text="<Issue Details Here>"
+                    android:textSize="18sp" />
 
             </LinearLayout>
         </ScrollView>
