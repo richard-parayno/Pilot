@@ -23,7 +23,7 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ImageButton imgBtnCall;
     String issuesArray[] = {"Issue 1", "Issue 2", "Issue 3"};
-
+    private ImageButton imgBtnBill;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         imgBtnCall = (ImageButton) findViewById(R.id.callButton);
+        imgBtnBill = (ImageButton) findViewById(R.id.billingButton);
 
         imgBtnCall.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
                 startActivity(callIntent);
 
+            }
+        });
+
+        imgBtnBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), BillActivity.class);
+
+                startActivity(intent);
             }
         });
 

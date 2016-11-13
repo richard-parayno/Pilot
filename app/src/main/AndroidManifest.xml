@@ -34,7 +34,6 @@
         <activity android:name=".StartupActivity">
 
         </activity>
-
         <activity android:name=".ProfileActivity"></activity>
 
     </application>
