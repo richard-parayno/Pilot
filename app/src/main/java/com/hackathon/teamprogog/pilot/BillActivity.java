@@ -25,7 +25,6 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
 
-       
 
         // initialize paymaya
         PayMayaConfig.setEnvironment(PayMayaConfig.ENVIRONMENT_PRODUCTION);
@@ -33,6 +32,9 @@ public class BillActivity extends AppCompatActivity implements PayMayaCheckoutCa
 
     }
 
+
+
+    
 
     private void executeCheckout(Checkout payload) {
         mPayMayaCheckout.execute(BillActivity.this, payload);
