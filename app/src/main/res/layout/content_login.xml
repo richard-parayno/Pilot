@@ -2,34 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:text="Welcome to Pilot!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAlignment="center"
-        android:textSize="36sp" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        app:srcCompat="@mipmap/ic_mainicon"
-        android:id="@+id/imageView"
-        android:layout_height="200dp" />
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="229dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp">
+        android:layout_marginTop="11dp"
+        android:layout_weight="0.74">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/register_view" >
+
+            <TextView
+                android:text="Welcome to Pilot!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                app:srcCompat="@mipmap/ic_mainicon"
+                android:id="@+id/imageView"
+                android:layout_height="200dp"
+                android:layout_weight="1" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
