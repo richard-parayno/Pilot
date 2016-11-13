@@ -1,9 +1,13 @@
 package com.hackathon.teamprogog.pilot;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +20,13 @@ import android.view.MenuItem;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private ImageButton imgBtnCall;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        imgBtnCall = (ImageButton) findViewById(R.id.callButton);
+
+        imgBtnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:09284994286"));
+
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    System.out.println("Button Failed");
+                    return;
+                }
+                startActivity(callIntent);
+
+            }
+        });
+
     }
 
     @Override
@@ -81,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent = new Intent(getBaseContext(), IssuesActivity.class);
         } else if (id == R.id.nav_billing) {
             intent = new Intent(getBaseContext(), BillActivity.class);
-            startActivity(intent);
         }
 
          else if (id == R.id.nav_signout) {

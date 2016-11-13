@@ -13,6 +13,10 @@ import android.widget.TextView;
 
 import com.hackathon.teamprogog.pilot.dummy.DummyContent;
 import com.hackathon.teamprogog.pilot.dummy.DummyContent.DummyItem;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.paymaya.sdk.android.checkout.models.Address;
 import com.paymaya.sdk.android.checkout.models.Buyer;
 import com.paymaya.sdk.android.checkout.models.Contact;
@@ -115,6 +119,35 @@ public class ProfileFragment extends Fragment {
     }
 
     public void constructBuyer() {
+        ParseObject buyerObject = new ParseObject("BuyerObject");
+        buyerObject.put("firstName", "Michael");
+        buyerObject.put("middleName", "Labjatan");
+        buyerObject.put("lastName", "Tiu");
+
+        buyerObject.put("line1", "19-A Onyx Street");
+        buyerObject.put("line2", "Greenheights Village");
+        buyerObject.put("city", "Paranaque City");
+        buyerObject.put("state", "NCR");
+        buyerObject.put("zipcode", 1702);
+        buyerObject.put("ccode", 63);
+
+        buyerObject.put("mobileNun", "09284994286");
+        buyerObject.put("emailAdd", "michael@yahoo.com");
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("BuyerObject");
+        query.getInBackground("xWMyZ4YEGZ", new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (e == null) {
+                    // object will be your game score
+                } else {
+                    // something went wrong
+                }
+            }
+        });
+
+
+
+
         Contact contact = new Contact("mobile number", "email");
         Address address = new Address("line 1", "line 2", "city", "state", "zip code", "country code");
         buyer = new Buyer("First name", "Middle name", "Last name");
