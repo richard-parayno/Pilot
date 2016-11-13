@@ -13,41 +13,199 @@
         app:srcCompat="@mipmap/ic_sampleuser"
         android:id="@+id/pictureImage" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
 
         <TextView
-            android:text="John Michael Tiu"
+            android:text="Labjatan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
-    </LinearLayout>
+            android:id="@+id/mName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp" />
 
-    <TextView
-        android:text="Address: P. Sherman 42 Wallabyway Sydney"
+        <TextView
+            android:text="Michael"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/mName"
+            android:layout_toStartOf="@+id/mName"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:text="Tiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lName"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/mName"
+            android:layout_toEndOf="@+id/mName" />
+    </RelativeLayout>
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/address"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="18sp" />
+        android:layout_weight="10.53">
 
-    <TextView
-        android:text="Phone Number: 09224923620"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pNum"
-        android:layout_marginLeft="10sp"
-        android:textSize="18sp" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
-    <TextView
-        android:text="Account Number: 123456"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/accNum"
-        android:layout_marginLeft="10sp"
-        android:textSize="18sp" />
+            <TextView
+                android:text="Mobile Number:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="09284994286"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobileNum"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Email: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="michael@yahoo.com"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailAdd"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Address: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="19-A Onyx St."
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lineOne"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="Greenheights Village"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lineTwo"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="Paranaque City"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/city"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="NCR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/state"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="1702"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/zipCode"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:text="63"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cCode"
+                android:textSize="18sp"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>
